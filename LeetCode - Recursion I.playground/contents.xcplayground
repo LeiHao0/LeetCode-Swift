@@ -4,5 +4,6 @@
         <page name='Reverse Linked List'/>
         <page name='Reverse String'/>
         <page name='Search in a Binary Search Tree'/>
+        <page name='Pascal&apos;s Triangle II'/>
     </pages>
 </playground>
