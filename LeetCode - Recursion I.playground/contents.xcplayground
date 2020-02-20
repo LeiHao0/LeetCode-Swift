@@ -5,5 +5,7 @@
         <page name='Reverse String'/>
         <page name='Search in a Binary Search Tree'/>
         <page name='Pascal&apos;s Triangle II'/>
+        <page name='Fibonacci Number Solution'/>
+        <page name='Climbing Stairs'/>
     </pages>
 </playground>
