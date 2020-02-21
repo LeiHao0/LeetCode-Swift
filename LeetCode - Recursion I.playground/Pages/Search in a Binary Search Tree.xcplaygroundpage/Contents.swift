@@ -5,9 +5,11 @@ class Solution {
     func searchBST(_ root: TreeNode?, _ val: Int) -> TreeNode? {
         guard let root = root else { return nil }
         if root.val == val { return root }
-        if let l = searchBST(root.left, val) { return l }
-        if let r = searchBST(root.right, val) { return r }
-        return nil
+        if val < root.val {
+            return searchBST(root.left, val)
+        } else {
+            return searchBST(root.right, val)
+        }
     }
 }
 
@@ -20,5 +22,6 @@ t.left?.right = TreeNode(3)
 
 let s = Solution()
 
-print(s.searchBST(t, 3)!.val)
-print(s.searchBST(t, 5)!.val)
+print(s.searchBST(t, 3)?.val)
+print(s.searchBST(t, 1)?.val)
+print(s.searchBST(t, 5)?.val)
