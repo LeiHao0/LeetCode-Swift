@@ -1,3 +1,5 @@
+//: [Previous](@previous)
+
 //Runtime: 176 ms
 //Memory Usage: 21 MB
 
@@ -25,3 +27,5 @@ let s = Solution()
 print(s.searchBST(t, 3)?.val)
 print(s.searchBST(t, 1)?.val)
 print(s.searchBST(t, 5)?.val)
+
+//: [Next](@next)

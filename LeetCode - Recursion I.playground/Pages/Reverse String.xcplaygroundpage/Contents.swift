@@ -1,3 +1,5 @@
+//: [Previous](@previous)
+
 class Solution {
     func reverseString(_ s: inout [Character]) {
         s.reverse()
@@ -18,3 +20,5 @@ print(a)
 a = ["H","a","n","n","a","h"]
 s.reverseString(&a)
 print(a)
+
+//: [Next](@next)

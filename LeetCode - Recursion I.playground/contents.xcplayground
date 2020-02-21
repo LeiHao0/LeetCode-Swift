@@ -7,5 +7,10 @@
         <page name='Pascal&apos;s Triangle II'/>
         <page name='Fibonacci Number Solution'/>
         <page name='Climbing Stairs'/>
+        <page name='Maximum Depth of Binary Tree'/>
+        <page name='Pow(x, n)'/>
+        <page name='Merge Two Sorted Lists'/>
+        <page name='K-th Symbol in Grammar'/>
+        <page name='Unique Binary Search Trees II'/>
     </pages>
 </playground>

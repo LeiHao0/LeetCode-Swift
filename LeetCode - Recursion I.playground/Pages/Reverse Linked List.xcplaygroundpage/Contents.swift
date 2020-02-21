@@ -1,7 +1,6 @@
-// CMD + 1
+//: [Previous](@previous)
 
-
-import SwiftUI
+// Use `CMD + 1` to `Show Project Navigator`
 
 class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
@@ -28,3 +27,5 @@ let s = Solution()
 h = s.reverseList(h)
 
 ShowList(h)
+
+//: [Next](@next)

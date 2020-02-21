@@ -1,3 +1,6 @@
+//: [Previous](@previous)
+
+
 //Runtime: 8 ms
 //Memory Usage: 20.7 MB
 
@@ -20,3 +23,5 @@ let s = Solution()
 for i in 0..<5 {
     print(s.getRow(i))
 }
+
+//: [Next](@next)
