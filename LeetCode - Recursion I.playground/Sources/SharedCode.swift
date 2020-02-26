@@ -3,6 +3,12 @@ import Foundation
 // Code inside modules can be shared between pages and other source files.
 
 
+extension ListNode {
+    public func show() {
+        print(ShowList(self))
+    }
+}
+
 public func ShowList(_ head: ListNode?) -> String {
     var p = head
     var str = ""
@@ -10,7 +16,7 @@ public func ShowList(_ head: ListNode?) -> String {
         str += "\(p!.val) -> "
         p = p?.next
     }
-    return "\(str) nil\n"
+    return "\(str)nil\n"
 }
 
 public class ListNode {
