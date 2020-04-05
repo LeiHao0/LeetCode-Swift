@@ -3,5 +3,6 @@
     <pages>
         <page name='Sort an Array'/>
         <page name='Validate Binary Search Tree'/>
+        <page name='Search a 2D Matrix II '/>
     </pages>
 </playground>
