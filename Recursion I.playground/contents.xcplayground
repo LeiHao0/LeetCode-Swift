@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='macos'>
     <pages>
-        <page name='Reverse Linked List'/>
         <page name='Reverse String'/>
+        <page name='Swap Nodes in Pairs '/>
+        <page name='Reverse Linked List'/>
         <page name='Search in a Binary Search Tree'/>
         <page name='Pascal&apos;s Triangle II'/>
         <page name='Fibonacci Number Solution'/>
