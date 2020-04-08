@@ -4,5 +4,8 @@
         <page name='Single Number'/>
         <page name='Happy Number'/>
         <page name='Maximum Subarray'/>
+        <page name='Move Zeroes'/>
+        <page name='Middle of the Linked List'/>
+        <page name='Counting Elements'/>
     </pages>
 </playground>
