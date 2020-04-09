@@ -5,8 +5,10 @@
         <page name='Happy Number'/>
         <page name='Maximum Subarray'/>
         <page name='Move Zeroes'/>
-        <page name='Middle of the Linked List'/>
+        <page name='Best Time to Buy and Sell Stock II'/>
         <page name='Group Anagrams'/>
         <page name='Counting Elements'/>
+        <page name='Middle of the Linked List'/>
+        <page name='Backspace String Compare'/>
     </pages>
 </playground>
