@@ -45,10 +45,29 @@
  */
 
 class Solution {
+    //    Runtime: 40 ms, 51.05%
+    //    Memory Usage: 21.7 MB
     func maxProfit(_ prices: [Int]) -> Int {
-        
-        return 0
+        return prices.enumerated().reduce(0) { $0 + ( $1.offset == 0 ? 0 : max(prices[$1.offset] - prices[$1.offset-1], 0) )}
+    }
+    
+    //    Runtime: 36 ms, faster than 84.00%
+    //    Memory Usage: 21.2 MB, less than 100.00%
+    func maxProfit0(_ prices: [Int]) -> Int {
+        var r = 0
+        for i in 1..<prices.count {
+            r += max(prices[i] - prices[i-1], 0)
+        }
+        return r
     }
 }
+
+let s = Solution()
+s.maxProfit([7,1,5,3,6,4]) // 7
+s.maxProfit([1,2,3,4,5]) // 4
+s.maxProfit([7,6,4,3,1]) // 0
+//s.maxProfit([1, 7, 2, 3, 6, 7, 6, 7]) // 0
+
+
 
 //: [Next](@next)
