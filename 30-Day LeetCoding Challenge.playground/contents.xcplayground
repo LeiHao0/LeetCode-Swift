@@ -13,5 +13,7 @@
         <page name='Min Stack'/>
         <page name='Diameter of Binary Tree'/>
         <page name='Last Stone Weight'/>
+        <page name='Contiguous Array'/>
+        <page name='Perform String Shifts '/>
     </pages>
 </playground>
