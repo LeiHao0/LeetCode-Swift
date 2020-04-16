@@ -46,12 +46,10 @@
  */
 
 class Solution {
-    //    Runtime: 4 ms
+    //    Runtime: 0 ms
     //    Memory Usage: 21.3 MB
     func stringShift(_ s: String, _ shift: [[Int]]) -> String {
-        var l = shift.reduce(0) { $0 + ($1[0] == 0 ? $1[1] : -$1[1]) }
-        while l < 0 || l > s.count { l = (l+s.count) % s.count }
-        let i = s.index(s.startIndex, offsetBy: l)
+        let i = s.index(s.startIndex, offsetBy: ((shift.reduce(0) { $0 + ($1[0] == 0 ? $1[1] : -$1[1]) } % s.count) + s.count) % s.count)
         return String(s[i...]) + String(s[..<i])
     }
 }

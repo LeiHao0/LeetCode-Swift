@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos'/>
+<playground version='6.0' target-platform='macos'>
+    <pages>
+        <page name='Max Consecutive Ones '/>
+        <page name='Find Numbers with Even Number of Digits'/>
+        <page name='Squares of a Sorted Array '/>
+    </pages>
+</playground>
