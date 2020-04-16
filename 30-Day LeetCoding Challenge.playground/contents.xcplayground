@@ -15,5 +15,7 @@
         <page name='Last Stone Weight'/>
         <page name='Contiguous Array'/>
         <page name='Perform String Shifts '/>
+        <page name='Product of Array Except Self'/>
+        <page name='Valid Parenthesis String'/>
     </pages>
 </playground>
