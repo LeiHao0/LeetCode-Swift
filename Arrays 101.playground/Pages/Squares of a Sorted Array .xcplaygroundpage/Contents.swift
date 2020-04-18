@@ -30,9 +30,7 @@
  */
 
 class Solution {
-    
-    // Runtime: 400 ms, 39.91%
-    // Memory Usage: 22.8 MB
+    // 400 ms, 39.91%
     func sortedSquares(_ A: [Int]) -> [Int] {
         return A.map({$0*$0}).sorted()
     }

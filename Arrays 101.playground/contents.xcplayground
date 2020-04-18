@@ -4,5 +4,6 @@
         <page name='Max Consecutive Ones '/>
         <page name='Find Numbers with Even Number of Digits'/>
         <page name='Squares of a Sorted Array '/>
+        <page name='Duplicate Zeros'/>
     </pages>
 </playground>
