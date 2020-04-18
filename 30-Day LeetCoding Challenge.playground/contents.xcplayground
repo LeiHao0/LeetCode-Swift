@@ -18,5 +18,6 @@
         <page name='Product of Array Except Self'/>
         <page name='Valid Parenthesis String'/>
         <page name='Number of Islands'/>
+        <page name='Minimum Path Sum'/>
     </pages>
 </playground>
