@@ -5,5 +5,10 @@
         <page name='Find Numbers with Even Number of Digits'/>
         <page name='Squares of a Sorted Array '/>
         <page name='Duplicate Zeros'/>
+        <page name='Merge Sorted Array'/>
+        <page name='Remove Element'/>
+        <page name='Remove Duplicates from Sorted Array'/>
+        <page name='Check If N and Its Double Exist'/>
+        <page name='Valid Mountain Array Solution'/>
     </pages>
 </playground>

@@ -19,5 +19,6 @@
         <page name='Valid Parenthesis String'/>
         <page name='Number of Islands'/>
         <page name='Minimum Path Sum'/>
+        <page name='Search in Rotated Sorted Array'/>
     </pages>
 </playground>

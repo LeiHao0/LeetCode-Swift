@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos'>
+    <pages>
+        <page name='1413. Minimum Value to Get Positive Step by Step Sum'/>
+        <page name='5373. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K'/>
+        <page name='5374. The k-th Lexicographical String of All Happy Strings of Length n'/>
+        <page name='5388. Reformat The String'/>
+        <page name='5389. Display Table of Food Orders in a Restaurant'/>
+        <page name='5390. Minimum Number of Frogs Croaking'/>
+    </pages>
+</playground>
