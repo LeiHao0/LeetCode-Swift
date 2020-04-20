@@ -20,5 +20,6 @@
         <page name='Number of Islands'/>
         <page name='Minimum Path Sum'/>
         <page name='Search in Rotated Sorted Array'/>
+        <page name='Construct Binary Search Tree from Preorder Traversal '/>
     </pages>
 </playground>
