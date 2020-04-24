@@ -21,5 +21,8 @@
         <page name='Minimum Path Sum'/>
         <page name='Search in Rotated Sorted Array'/>
         <page name='Construct Binary Search Tree from Preorder Traversal '/>
+        <page name='Leftmost Column with at Least a One'/>
+        <page name='Subarray Sum Equals K'/>
+        <page name='Bitwise AND of Numbers Range'/>
     </pages>
 </playground>
