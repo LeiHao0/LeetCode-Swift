@@ -24,5 +24,9 @@
         <page name='Leftmost Column with at Least a One'/>
         <page name='Subarray Sum Equals K'/>
         <page name='Bitwise AND of Numbers Range'/>
+        <page name='LRU Cache'/>
+        <page name='Jump Game'/>
+        <page name='Longest Common Subsequence'/>
+        <page name='Maximal Square'/>
     </pages>
 </playground>

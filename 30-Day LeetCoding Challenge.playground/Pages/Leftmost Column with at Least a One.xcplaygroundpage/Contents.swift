@@ -70,23 +70,9 @@ class Solution {
     func leftMostColumnWithOne(_ binaryMatrix: BinaryMatrix) -> Int {
         var nm = binaryMatrix.dimensions(), gv = Int.max
         for i in 0..<nm[0] {
-            var j = 0, k = nm[1]-1, v = -1, p = -1
-            while j <= k {
-                p = j + (k-j)/2
-                v = binaryMatrix.get(i, p)
-                if (p == 0 || p == nm[1]-1) && v == 0 {
-                    p = Int.max
-                    break
-                }
-                if v == 0 {
-                    j = p+1
-                } else {
-                    k = p-1
-                }
+            for j in 0..<nm[1] {
+                if binaryMatrix.get(i, j) == 1 { gv = min(gv, j) }
             }
-//            print(p)
-            print(gv, p)
-            gv = min(gv, p)
         }
         return gv == Int.max ? -1 : gv
     }
