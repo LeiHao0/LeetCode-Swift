@@ -30,5 +30,6 @@
         <page name='Maximal Square'/>
         <page name='First Unique Number'/>
         <page name='Binary Tree Maximum Path Sum'/>
+        <page name='Check If a String Is a Valid Sequence from Root to Leaves Path in a Binary Tree'/>
     </pages>
 </playground>
