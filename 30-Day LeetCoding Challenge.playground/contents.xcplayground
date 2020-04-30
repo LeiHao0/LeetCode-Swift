@@ -28,5 +28,7 @@
         <page name='Jump Game'/>
         <page name='Longest Common Subsequence'/>
         <page name='Maximal Square'/>
+        <page name='First Unique Number'/>
+        <page name='Binary Tree Maximum Path Sum'/>
     </pages>
 </playground>
