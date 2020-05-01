@@ -103,7 +103,7 @@ class FirstUnique {
     }
     
     func add(_ value: Int) {
-        if sets.contains(value) {
+        if sets.contains(value) { // dict.keys.contains(value) wrong answer
             rmNode(dict[value] ?? nil)
             dict[value] = nil
         } else {
