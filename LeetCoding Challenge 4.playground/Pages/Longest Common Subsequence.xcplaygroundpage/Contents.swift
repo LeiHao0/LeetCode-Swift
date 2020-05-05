@@ -56,9 +56,27 @@
 
 class Solution {
     func longestCommonSubsequence(_ text1: String, _ text2: String) -> Int {
-        
-        return 0
+        var i = 0, j = 0
+        let (t1, t2) = (text1.count >= text2.count) ? (Array(text1), Array(text2) ) : (Array(text2), Array(text1))
+        while i < t1.count, j < t2.count {
+            if t1[i] == t2[j] {
+                i += 1; j += 1
+            } else {
+                i += 1
+            }
+            
+        }
+        return j
     }
 }
+
+let s = Solution()
+s.longestCommonSubsequence("abcde", "ace")
+s.longestCommonSubsequence("", "ace")
+s.longestCommonSubsequence("aaa", "aab")
+s.longestCommonSubsequence("abcd", "acryt")
+s.longestCommonSubsequence("psnw", "vozsh")
+s.longestCommonSubsequence("ezupkr", "ubmrapg")
+
 
 //: [Next](@next)
