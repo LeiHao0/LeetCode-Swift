@@ -5,7 +5,6 @@
 //66.82%
 
 class Solution {
-
     //Runtime: 80 ms
     //Memory Usage: 20.9 MB
     //86.84%

@@ -67,14 +67,14 @@
 
 
 class Solution {
+    // 80ms, 90,49%
     func leftMostColumnWithOne(_ binaryMatrix: BinaryMatrix) -> Int {
-        var nm = binaryMatrix.dimensions(), gv = Int.max
-        for i in 0..<nm[0] {
-            for j in 0..<nm[1] {
-                if binaryMatrix.get(i, j) == 1 { gv = min(gv, j) }
-            }
+        let nm = binaryMatrix.dimensions(), n = nm[0], m = nm[1]
+        var i = 0, j = m-1
+        while i < n, j  >= 0 {
+            binaryMatrix.get(i, j) == 1 ? (j -= 1) : (i += 1)
         }
-        return gv == Int.max ? -1 : gv
+        return (j == m-1) ? -1 : j + 1
     }
 }
 
