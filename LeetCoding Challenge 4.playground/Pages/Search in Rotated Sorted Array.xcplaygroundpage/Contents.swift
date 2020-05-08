@@ -32,8 +32,25 @@
  */
 
 class Solution {
-    // 16 ms, 85.22%, 😂
+    
+    // 16 ms, 95.99%...
     func search(_ nums: [Int], _ target: Int) -> Int {
+        var i = 0, j = nums.count-1
+        while i <= j {
+            let mid = i + (j - i)/2
+            if nums[mid] == target {
+                return mid
+            } else if nums[mid] >= nums[i] {
+                (target >= nums[i] && target < nums[mid]) ? (j = mid-1) : (i = mid+1)
+            } else {
+                (target <= nums[j] && target > nums[mid]) ? (i = mid+1) : (j = mid-1)
+            }
+        }
+        return -1
+    }
+    
+    // 16 ms, 95.99%, 😂
+    func search0(_ nums: [Int], _ target: Int) -> Int {
         return nums.firstIndex(of: target) ?? -1
     }
     
