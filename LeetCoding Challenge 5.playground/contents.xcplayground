@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios'>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='First Bad Version'/>
         <page name='Jewels and Stones'/>
         <page name='Ransom Note'/>
         <page name='Number Complement'/>
+        <page name='First Unique Character in a String'/>
+        <page name='Cousins in Binary Tree'/>
+        <page name='Check If It Is a Straight Line'/>
     </pages>
 </playground>
