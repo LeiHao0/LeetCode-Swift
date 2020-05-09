@@ -23,8 +23,30 @@
  */
 
 class Solution {
-    //  4ms, 84.52%
+    // Newton's Algorithm
+    // 4ms, 84.52%
     func isPerfectSquare(_ num: Int) -> Bool {
+        var x = (num+1)/2
+        while x*x > num {
+            x = (x + num/x) / 2
+        }
+        return x*x == num
+    }
+    
+    //  0ms, 100%
+    func isPerfectSquare1(_ num: Int) -> Bool {
+        var i = 1, j = (num+1)/2
+        while i <= j {
+            let mid = i + (j-i)/2
+            let v = mid*mid
+            if v == num { return true }
+            v > num ? (j = mid-1) : (i = mid+1)
+        }
+        return false
+    }
+    
+    //  4ms, 84.52%
+    func isPerfectSquare0(_ num: Int) -> Bool {
         var i = 1, j = num
         while i <= j {
             let mid = i + (j-i)/2
@@ -37,12 +59,12 @@ class Solution {
 }
 
 let s = Solution()
-s.isPerfectSquare(16)
 s.isPerfectSquare(1)
 s.isPerfectSquare(2)
 s.isPerfectSquare(3)
 s.isPerfectSquare(4)
 s.isPerfectSquare(14)
+s.isPerfectSquare(16)
 
 
 //: [Next](@next)
