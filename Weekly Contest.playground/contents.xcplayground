@@ -10,5 +10,6 @@
         <page name='5392. Maximum Score After Splitting a String'/>
         <page name='5384. Kids With the Greatest Number of Candies'/>
         <page name='5400. Destination City'/>
+        <page name='5404. Build an Array With Stack Operations'/>
     </pages>
 </playground>
