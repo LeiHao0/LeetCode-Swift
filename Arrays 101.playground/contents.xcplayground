@@ -10,5 +10,14 @@
         <page name='Remove Duplicates from Sorted Array'/>
         <page name='Check If N and Its Double Exist'/>
         <page name='Valid Mountain Array Solution'/>
+        <page name='Replace Elements with Greatest Element on Right Side'/>
+        <page name='Remove Duplicates from Sorted Array '/>
+        <page name='Move Zeroes'/>
+        <page name='Sort Array By Parity'/>
+        <page name='Squares of a Sorted Array'/>
+        <page name='Height Checker'/>
+        <page name='Max Consecutive Ones II'/>
+        <page name='Third Maximum Number'/>
+        <page name='Find All Numbers Disappeared in an Array'/>
     </pages>
 </playground>

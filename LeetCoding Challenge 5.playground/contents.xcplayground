@@ -10,5 +10,7 @@
         <page name='Check If It Is a Straight Line'/>
         <page name='Valid Perfect Square'/>
         <page name='Find the Town Judge'/>
+        <page name='Flood Fill'/>
+        <page name='Single Element in a Sorted Array'/>
     </pages>
 </playground>
