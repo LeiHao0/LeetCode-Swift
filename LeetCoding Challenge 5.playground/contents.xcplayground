@@ -12,5 +12,6 @@
         <page name='Find the Town Judge'/>
         <page name='Flood Fill'/>
         <page name='Single Element in a Sorted Array'/>
+        <page name='Remove K Digits'/>
     </pages>
 </playground>
