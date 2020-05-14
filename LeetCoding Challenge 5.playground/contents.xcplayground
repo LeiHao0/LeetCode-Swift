@@ -13,5 +13,6 @@
         <page name='Flood Fill'/>
         <page name='Single Element in a Sorted Array'/>
         <page name='Remove K Digits'/>
+        <page name='Implement Trie (Prefix Tree)'/>
     </pages>
 </playground>
