@@ -14,5 +14,6 @@
         <page name='Single Element in a Sorted Array'/>
         <page name='Remove K Digits'/>
         <page name='Implement Trie (Prefix Tree)'/>
+        <page name='Maximum Sum Circular Subarray'/>
     </pages>
 </playground>

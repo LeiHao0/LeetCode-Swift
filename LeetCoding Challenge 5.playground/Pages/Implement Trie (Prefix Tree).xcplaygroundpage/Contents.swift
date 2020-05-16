@@ -26,6 +26,7 @@
 
 
 class Trie {
+    // 292ms, 82.68%
     func insert(_ word: String) {
         var node = root
         for c in word {
