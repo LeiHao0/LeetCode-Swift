@@ -73,7 +73,7 @@
  */
 
 class Solution {
-    // 608ms, 25%
+    // 556ms, 75%
     func maxSubarraySumCircular(_ A: [Int]) -> Int {
         if A.count < 2 { return A[0] }
         var lv = A[0], gv = A[0], leftsum = 0, rightSums = A, rightMaxs = A
@@ -83,8 +83,6 @@ class Solution {
         }
         for i in (1..<A.count).reversed() {
             rightSums[i-1] = rightSums[i] + A[i-1]
-        }
-        for i in (1..<A.count).reversed() {
             rightMaxs[i-1] = max(rightMaxs[i], rightSums[i-1])
         }
         for i in 0..<(A.count-2) {

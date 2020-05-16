@@ -15,5 +15,6 @@
         <page name='Remove K Digits'/>
         <page name='Implement Trie (Prefix Tree)'/>
         <page name='Maximum Sum Circular Subarray'/>
+        <page name='Odd Even Linked List'/>
     </pages>
 </playground>
