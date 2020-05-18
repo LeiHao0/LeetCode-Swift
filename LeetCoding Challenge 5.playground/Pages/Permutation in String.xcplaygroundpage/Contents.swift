@@ -61,13 +61,23 @@ class Solution {
         func atoi(_ c: Character) -> Int { return Int(c.asciiValue! - 97) }
         
         let s1 = Array(s1), s2 = Array(s2)
-        var arr1 = Array(repeating: 0, count: 26), arr2 = arr1, i = 1
+        var arr1 = Array(repeating: 0, count: 26), arr2 = arr1
         for c in s1 { arr1[atoi(c)] += 1 }
         for c in s2[..<s1.count] { arr2[atoi(c)] += 1 }
         if arr1 == arr2 { return true }
+        
+        // say: "ab", "eidbaooo"
+        var i = 1
         while i <= s2.count-s1.count {
+            // 1st time in loop
+            //     i = 1
+            // s1  ab
+            // s2 eidbaooo
+            
+            // arr2 was has 'e, i', now should remove 'e'(index i-1) and add 'd'(index i+s1.count-1)
             arr2[atoi(s2[i-1])] -= 1
-            arr2[atoi(s2[i-1+s1.count])] += 1
+            arr2[atoi(s2[i+s1.count-1])] += 1
+            
             if arr1 == arr2 { return true }
             i += 1
         }
