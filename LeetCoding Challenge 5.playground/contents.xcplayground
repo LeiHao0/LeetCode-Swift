@@ -16,5 +16,7 @@
         <page name='Implement Trie (Prefix Tree)'/>
         <page name='Maximum Sum Circular Subarray'/>
         <page name='Odd Even Linked List'/>
+        <page name='Find All Anagrams in a String'/>
+        <page name='Permutation in String'/>
     </pages>
 </playground>
