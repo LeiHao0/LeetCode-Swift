@@ -44,7 +44,7 @@ class Solution {
         }
         return v
     }
-    
+
     // 8ms, 76.89%
     func numJewelsInStones0(_ J: String, _ S: String) -> Int {
         let j = Set(J)

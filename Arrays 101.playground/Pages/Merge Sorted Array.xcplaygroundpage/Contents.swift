@@ -3,7 +3,6 @@
 /**
  # Merge Sorted Array
 
-
  Given two sorted integer arrays *nums1* and *nums2*, merge *nums2* into *nums1* as one sorted array.
 
  **Note:**
@@ -32,12 +31,12 @@
 
 class Solution {
     // 12ms, 85.93%
-    func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+    func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _: Int) {
         nums1 = (nums1[..<m] + nums2).sorted()
     }
-    
+
     // 12ms, 85.93%, same...
-    func merge0(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+    func merge0(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _: Int) {
         let nums0 = nums1[..<m]
         var i = 0, j = 0, k = 0
         while i < nums0.count, j < nums2.count {
@@ -64,7 +63,7 @@ class Solution {
 }
 
 let s = Solution()
-var a = [1,2,3,0,0,0], b = [2,5,6]
+var a = [1, 2, 3, 0, 0, 0], b = [2, 5, 6]
 
 s.merge(&a, 3, b, 3)
 a

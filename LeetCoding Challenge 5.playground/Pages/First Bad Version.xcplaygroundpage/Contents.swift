@@ -24,8 +24,6 @@
  ```
  */
 
-
-
 protocol VersionControl {
     func isBadVersion(_ version: Int) -> Bool
 }
@@ -41,8 +39,8 @@ class Solution: VersionControl {
     func firstBadVersion(_ n: Int) -> Int {
         var i = 1, j = n
         while i <= j {
-            let h = i + (j-i)/2
-            isBadVersion(h) ? (j = h-1) : (i = h + 1)
+            let h = i + (j - i) / 2
+            isBadVersion(h) ? (j = h - 1) : (i = h + 1)
         }
         return i
     }
@@ -52,6 +50,5 @@ let s = Solution()
 s.firstBadVersion(3)
 s.firstBadVersion(5)
 s.firstBadVersion(4)
-
 
 //: [Next](@next)

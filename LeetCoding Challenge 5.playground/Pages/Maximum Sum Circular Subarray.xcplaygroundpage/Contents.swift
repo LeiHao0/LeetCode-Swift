@@ -9,8 +9,6 @@
 
  Also, a subarray may only include each element of the fixed buffer `A` at most once. (Formally, for a subarray `C[i], C[i+1], ..., C[j]`, there does not exist `i <= k1, k2 <= j` with `k1 % A.length = k2 % A.length`.)
 
-  
-
  **Example 1:**
 
  ```
@@ -51,8 +49,6 @@
  Explanation: Subarray [-1] has maximum sum -1
  ```
 
-  
-
  **Note:**
 
  1. `-30000 <= A[i] <= 30000`
@@ -77,17 +73,17 @@ class Solution {
     func maxSubarraySumCircular(_ A: [Int]) -> Int {
         if A.count < 2 { return A[0] }
         var lv = A[0], gv = A[0], leftsum = 0, rightSums = A, rightMaxs = A
-        for i in 1..<A.count {
+        for i in 1 ..< A.count {
             lv = max(lv, 0) + A[i]
             gv = max(gv, lv)
         }
-        for i in (1..<A.count).reversed() {
-            rightSums[i-1] = rightSums[i] + A[i-1]
-            rightMaxs[i-1] = max(rightMaxs[i], rightSums[i-1])
+        for i in (1 ..< A.count).reversed() {
+            rightSums[i - 1] = rightSums[i] + A[i - 1]
+            rightMaxs[i - 1] = max(rightMaxs[i], rightSums[i - 1])
         }
-        for i in 0..<(A.count-2) {
+        for i in 0 ..< (A.count - 2) {
             leftsum += A[i]
-            gv = max(gv, leftsum+rightMaxs[i+2])
+            gv = max(gv, leftsum + rightMaxs[i + 2])
         }
         return gv
     }
@@ -95,12 +91,11 @@ class Solution {
 
 let s = Solution()
 s.maxSubarraySumCircular([-2]) // -2
-s.maxSubarraySumCircular([1,-2,3,-2]) // 3
-s.maxSubarraySumCircular([5,-3,5]) // 10
-s.maxSubarraySumCircular([3,-1,2,-1]) // 4
-s.maxSubarraySumCircular([3,-2,2,-3]) // 3
-s.maxSubarraySumCircular([-2,-3,-1]) // -1
-s.maxSubarraySumCircular([6,9,-3]) // 15
-
+s.maxSubarraySumCircular([1, -2, 3, -2]) // 3
+s.maxSubarraySumCircular([5, -3, 5]) // 10
+s.maxSubarraySumCircular([3, -1, 2, -1]) // 4
+s.maxSubarraySumCircular([3, -2, 2, -3]) // 3
+s.maxSubarraySumCircular([-2, -3, -1]) // -1
+s.maxSubarraySumCircular([6, 9, -3]) // 15
 
 //: [Next](@next)

@@ -9,14 +9,13 @@ class Solution {
             k = dict[p]
             if k == nil { return p }
         }
-        
+
         return ""
     }
 }
 
 let s = Solution()
-s.destCity([["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]])
-s.destCity([["B","C"],["D","B"],["C","A"]])
-
+s.destCity([["London", "New York"], ["New York", "Lima"], ["Lima", "Sao Paulo"]])
+s.destCity([["B", "C"], ["D", "B"], ["C", "A"]])
 
 //: [Next](@next)

@@ -31,7 +31,7 @@ class Solution {
         }
         return m << i
     }
-    
+
     // 20 ms
     func rangeBitwiseAnd0(_ m: Int, _ n: Int) -> Int {
         var m = m, n = n
@@ -48,6 +48,5 @@ s.rangeBitwiseAnd(4, 7)
 s.rangeBitwiseAnd(149, 155)
 s.rangeBitwiseAnd(136, 146)
 s.rangeBitwiseAnd(0, 1)
-
 
 //: [Next](@next)

@@ -11,8 +11,6 @@
 
  Return `true` if and only if the nodes corresponding to the values `x` and `y` are cousins.
 
-  
-
  **Example 1:
  ![img](https://assets.leetcode.com/uploads/2019/02/12/q1248-01.png)**
 
@@ -38,29 +36,26 @@
  Output: false
  ```
 
-  
-
  **Note:**
 
  1. The number of nodes in the tree will be between `2` and `100`.
  2. Each node has a unique integer value from `1` to `100`.
 
-  
  */
 
 class Solution {
     private var xv = (0, 0), yv = (0, 0)
-    
+
     // 8ms, 96.49%
     func isCousins(_ root: TreeNode?, _ x: Int, _ y: Int) -> Bool {
         helper(root, 0, x, y)
-        
+
         return xv.0 == yv.0 && xv.1 != yv.1
     }
-    
+
     private func helper(_ node: TreeNode?, _ level: Int, _ x: Int, _ y: Int) {
         guard let node = node else { return }
-        let l = level+1
+        let l = level + 1
         if let n = node.left {
             if n.val == x {
                 xv = (l, node.val)
@@ -75,12 +70,11 @@ class Solution {
                 yv = (l, node.val)
             }
         }
-        
+
         helper(node.left, l, x, y)
-        
+
         helper(node.right, l, x, y)
     }
-    
 }
 
 //: [Next](@next)

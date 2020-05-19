@@ -3,15 +3,15 @@
 class Solution {
     func arrangeWords(_ text: String) -> String {
         let lowerText = (text.prefix(1).lowercased() + text.dropFirst()).split(separator: " ")
-        var dict = Dictionary<Int, [String.SubSequence]>()
+        var dict = [Int: [String.SubSequence]]()
         lowerText.forEach { s in
             dict[s.count] = (dict[s.count] ?? []) + [s]
         }
-        
+
         let str = dict.keys.sorted().map { k in
             dict[k]!.joined(separator: " ")
         }.joined(separator: " ")
-        
+
         return str.prefix(1).uppercased() + str.dropFirst()
     }
 }

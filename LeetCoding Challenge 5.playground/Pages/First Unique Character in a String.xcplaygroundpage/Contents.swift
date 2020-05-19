@@ -15,15 +15,13 @@
  return 2.
  ```
 
-
-
  **Note:** You may assume the string contain only lowercase letters.
  */
 
 class Solution {
     // 256ms, 69.7%
     func firstUniqChar(_ s: String) -> Int {
-        var dict = Dictionary<Character, Int>(), i = 0
+        var dict = [Character: Int](), i = 0
         for c in s {
             dict[c] = ((dict[c] ?? 0) + 1)
         }
@@ -33,10 +31,10 @@ class Solution {
         }
         return -1
     }
-    
+
     // 312ms, 50.4%
     func firstUniqChar0(_ s: String) -> Int {
-        var dict = Dictionary<Character, Int>()
+        var dict = [Character: Int]()
         for c in s {
             dict[c] = ((dict[c] ?? 0) + 1)
         }

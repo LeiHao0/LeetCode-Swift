@@ -7,6 +7,6 @@ class Solution {
 }
 
 let s = Solution()
-s.busyStudent([1,2,3], [3,2,7], 4)
+s.busyStudent([1, 2, 3], [3, 2, 7], 4)
 
 //: [Next](@next)

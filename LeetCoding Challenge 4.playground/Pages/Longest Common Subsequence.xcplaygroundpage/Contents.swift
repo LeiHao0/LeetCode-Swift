@@ -7,11 +7,7 @@
 
  A *subsequence* of a string is a new string generated from the original string with some characters(can be none) deleted without changing the relative order of the remaining characters. (eg, "ace" is a subsequence of "abcde" while "aec" is not). A *common subsequence* of two strings is a subsequence that is common to both strings.
 
-  
-
  If there is no common subsequence, return 0.
-
-  
 
  **Example 1:**
 
@@ -37,8 +33,6 @@
  Explanation: There is no such common subsequence, so the result is 0.
  ```
 
-  
-
  **Constraints:**
 
  - `1 <= text1.length <= 1000`
@@ -57,14 +51,13 @@
 class Solution {
     func longestCommonSubsequence(_ text1: String, _ text2: String) -> Int {
         var i = 0, j = 0
-        let (t1, t2) = (text1.count >= text2.count) ? (Array(text1), Array(text2) ) : (Array(text2), Array(text1))
+        let (t1, t2) = (text1.count >= text2.count) ? (Array(text1), Array(text2)) : (Array(text2), Array(text1))
         while i < t1.count, j < t2.count {
             if t1[i] == t2[j] {
                 i += 1; j += 1
             } else {
                 i += 1
             }
-            
         }
         return j
     }
@@ -77,6 +70,5 @@ s.longestCommonSubsequence("aaa", "aab")
 s.longestCommonSubsequence("abcd", "acryt")
 s.longestCommonSubsequence("psnw", "vozsh")
 s.longestCommonSubsequence("ezupkr", "ubmrapg")
-
 
 //: [Next](@next)

@@ -5,8 +5,8 @@ class Solution {
         if s.isEmpty { return 0 }
         var lv = 1, gv = 1
         let cs = Array(s)
-        for i in 1..<cs.count {
-            if cs[i] == cs[i-1] {
+        for i in 1 ..< cs.count {
+            if cs[i] == cs[i - 1] {
                 lv += 1
                 gv = max(gv, lv)
             } else {
@@ -25,6 +25,5 @@ s.maxPower("abbcccddddeeeeedcba") // 5
 s.maxPower("triplepillooooow") // 5
 s.maxPower("hooraaaaaaaaaaay") // 11
 s.maxPower("tourist") // 1
-
 
 //: [Next](@next)

@@ -7,8 +7,6 @@
 
  We get the given string from the concatenation of an array of integers `arr` and the concatenation of all values of the nodes along a path results in a **sequence** in the given binary tree.
 
-  
-
  **Example 1:**
 
  **![img](https://assets.leetcode.com/uploads/2019/12/18/leetcode_testcase_1.png)**
@@ -43,8 +41,6 @@
  Explanation: The path 0 -> 1 -> 1 is a sequence, but it is not a valid sequence.
  ```
 
-  
-
  **Constraints:**
 
  - `1 <= arr.length <= 5000`
@@ -64,7 +60,7 @@ class Solution {
     // 204ms
     func isValidSequence(_ root: TreeNode?, _ arr: [Int]) -> Bool {
         guard let root = root, let v = arr.first else { return false }
-        
+
         if root.val == v {
             if arr.count == 1 && root.left == nil && root.right == nil { return true }
             let subArr = Array(arr[1...])
@@ -82,4 +78,3 @@ let s = Solution()
 s.isValidSequence(t, [8])
 
 //: [Next](@next)
-

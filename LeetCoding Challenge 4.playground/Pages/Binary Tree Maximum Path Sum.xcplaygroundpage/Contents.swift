@@ -38,14 +38,14 @@ class Solution {
     private var vMax = Int.min
     private func helper(_ root: TreeNode?) -> Int {
         guard let root = root else { return 0 }
-        
+
         let l = max(helper(root.left), 0)
         let r = max(helper(root.right), 0)
-        
+
         vMax = max(vMax, root.val + l + r)
         return root.val + max(l, r)
     }
-    
+
     func maxPathSum(_ root: TreeNode?) -> Int {
         helper(root)
         return vMax

@@ -25,8 +25,6 @@
  to the starting pixel.
  ```
 
-
-
  **Note:**
 
  The length of `image` and `image[0]` will be in the range `[1, 50]`.
@@ -34,8 +32,6 @@
  The given starting pixel will satisfy `0 <= sr < image.length` and `0 <= sc < image[0].length`.
 
  The value of each color in `image[i][j]` and `newColor` will be an integer in `[0, 65535]`.
-
-
 
    Hide Hint #1
 
@@ -50,37 +46,34 @@ class Solution {
         dfs(&filledImage, sr, sc, image[sr][sc], newColor)
         return filledImage
     }
-    
-    private func dfs(_  image: inout [[Int]], _ r: Int, _ c: Int, _ oriColor: Int, _ newColor: Int) {
+
+    private func dfs(_ image: inout [[Int]], _ r: Int, _ c: Int, _ oriColor: Int, _ newColor: Int) {
         image[r][c] = newColor
-        if r > 0, image[r-1][c] == oriColor {
-            dfs(&image, r-1, c, oriColor, newColor)
+        if r > 0, image[r - 1][c] == oriColor {
+            dfs(&image, r - 1, c, oriColor, newColor)
         }
-        if c > 0, image[r][c-1] == oriColor {
-            dfs(&image, r, c-1, oriColor, newColor)
+        if c > 0, image[r][c - 1] == oriColor {
+            dfs(&image, r, c - 1, oriColor, newColor)
         }
-        if r < image.count-1, image[r+1][c] == oriColor {
-            dfs(&image, r+1, c, oriColor, newColor)
+        if r < image.count - 1, image[r + 1][c] == oriColor {
+            dfs(&image, r + 1, c, oriColor, newColor)
         }
-        if c < (image.first?.count ?? 0) - 1, image[r][c+1] == oriColor {
-            dfs(&image, r, c+1, oriColor, newColor)
+        if c < (image.first?.count ?? 0) - 1, image[r][c + 1] == oriColor {
+            dfs(&image, r, c + 1, oriColor, newColor)
         }
     }
 }
 
 let s = Solution()
 s.floodFill([
-    [1,1,1],
-    [1,1,0],
-    [1,0,1]
-    ], 1, 1, 2)
+    [1, 1, 1],
+    [1, 1, 0],
+    [1, 0, 1],
+], 1, 1, 2)
 
 s.floodFill([
-    [0,0,0],
-    [0,1,1]
+    [0, 0, 0],
+    [0, 1, 1],
 ], 1, 1, 1)
-
-
-
 
 //: [Next](@next)

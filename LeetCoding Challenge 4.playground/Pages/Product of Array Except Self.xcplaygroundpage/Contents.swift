@@ -20,17 +20,16 @@
  Could you solve it with constant space complexity? (The output array **does not** count as extra space for the purpose of space complexity analysis.)
  */
 
-
 class Solution {
     //    88 ms, 100%
     //    Memory Usage: 24.2 MB
     func productExceptSelf(_ nums: [Int]) -> [Int] {
-        var a = Array(repeating: 1, count: nums.count), t = 1, j = nums.count-2
-        for i in 1..<nums.count {
-            a[i] = a[i-1] * nums[i-1]
+        var a = Array(repeating: 1, count: nums.count), t = 1, j = nums.count - 2
+        for i in 1 ..< nums.count {
+            a[i] = a[i - 1] * nums[i - 1]
         }
         while j >= 0 {
-            t *= nums[j+1]
+            t *= nums[j + 1]
             a[j] *= t
             j -= 1
         }
@@ -39,6 +38,6 @@ class Solution {
 }
 
 let s = Solution()
-s.productExceptSelf([1,2,3,4]) // [24,12,8,6]
+s.productExceptSelf([1, 2, 3, 4]) // [24,12,8,6]
 
 //: [Next](@next)

@@ -5,18 +5,18 @@
 class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
         if head?.next == nil { return head }
-        
+
         let h = reverseList(head?.next)
-        
+
         head?.next?.next = head
         head?.next = nil
-        
+
         return h
     }
 }
 
 var h: ListNode? = ListNode(1)
-//h = nil
+// h = nil
 h?.next = ListNode(2)
 h?.next?.next = ListNode(3)
 h?.next?.next?.next = ListNode(4)

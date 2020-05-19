@@ -2,7 +2,6 @@ import Foundation
 
 // Code inside modules can be shared between pages and other source files.
 
-
 extension ListNode {
     public func show() {
         print(ShowList(self))
@@ -24,10 +23,9 @@ public class ListNode {
     public var next: ListNode?
     public init(_ val: Int) {
         self.val = val
-        self.next = nil
+        next = nil
     }
 }
-
 
 public class TreeNode {
     public var val: Int
@@ -35,7 +33,7 @@ public class TreeNode {
     public var right: TreeNode?
     public init(_ val: Int) {
         self.val = val
-        self.left = nil
-        self.right = nil
+        left = nil
+        right = nil
     }
 }

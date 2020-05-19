@@ -12,8 +12,6 @@
 
  At the end, there is at most 1 stone left. Return the weight of this stone (or 0 if there are no stones left.)
 
-  
-
  **Example 1:**
 
  ```
@@ -25,8 +23,6 @@
  we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
  we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of last stone.
  ```
-
-  
 
  **Note:**
 
@@ -43,7 +39,7 @@ class Solution {
     //    Memory Usage: 21.3 MB
     func lastStoneWeight(_ stones: [Int]) -> Int {
         if stones.count < 2 { return stones.first ?? 0 }
-        
+
         var s = stones, m0 = (0, 0), m1 = (0, 0)
         for (i, v) in stones.enumerated() {
             if v > m0.1 {
@@ -53,28 +49,28 @@ class Solution {
                 m1 = (i, v)
             }
         }
-        
+
         s.remove(at: m0.0)
         s.remove(at: m1.0 - (m0.0 > m1.0 ? 0 : 1))
-        
-        return lastStoneWeight(m0.1-m1.1 == 0 ? s : s + [m0.1-m1.1])
+
+        return lastStoneWeight(m0.1 - m1.1 == 0 ? s : s + [m0.1 - m1.1])
     }
-    
+
     //    Runtime: 16 ms, 12.5%
     //    Memory Usage: 21.8 MB
     func lastStoneWeight0(_ stones: [Int]) -> Int {
         if stones.count < 2 { return stones.first ?? 0 }
         let stones = stones.sorted { $0 > $1 }
-        
-        let d = stones[0]-stones[1]
+
+        let d = stones[0] - stones[1]
         let a = Array(stones[2...])
-        
+
         return lastStoneWeight0(d == 0 ? a : a + [d])
     }
 }
 
 let s = Solution()
-s.lastStoneWeight([2,7,4,1,8,1]) // 1
-s.lastStoneWeight([4,3,4,3,2]) // 1
+s.lastStoneWeight([2, 7, 4, 1, 8, 1]) // 1
+s.lastStoneWeight([4, 3, 4, 3, 2]) // 1
 
 //: [Next](@next)

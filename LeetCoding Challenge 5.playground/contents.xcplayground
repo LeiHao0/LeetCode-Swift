@@ -18,5 +18,6 @@
         <page name='Odd Even Linked List'/>
         <page name='Find All Anagrams in a String'/>
         <page name='Permutation in String'/>
+        <page name='Online Stock Span'/>
     </pages>
 </playground>

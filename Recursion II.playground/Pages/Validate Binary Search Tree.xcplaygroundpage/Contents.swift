@@ -11,8 +11,6 @@
  - The right subtree of a node contains only nodes with keys **greater than** the node's key.
  - Both the left and right subtrees must also be binary search trees.
 
-  
-
  **Example 1:**
 
  ```
@@ -39,24 +37,22 @@
  ```
  */
 
-
-//Runtime: 48 ms
-//Memory Usage: 21.5 MB
-//67.41%
+// Runtime: 48 ms
+// Memory Usage: 21.5 MB
+// 67.41%
 
 class Solution {
     func isValidBST(_ root: TreeNode?) -> Bool {
         return helper(root, Int.min, Int.max)
     }
-    
+
     private func helper(_ node: TreeNode?, _ lower: Int, _ upper: Int) -> Bool {
         guard let n = node else { return true }
         if n.val <= lower || n.val >= upper { return false }
-        
+
         return helper(n.left, lower, n.val) && helper(n.right, n.val, upper)
     }
 }
-
 
 var r = TreeNode(2)
 r.left = TreeNode(1)

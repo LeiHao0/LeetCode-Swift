@@ -21,8 +21,8 @@ class Solution {
 }
 
 let s = Solution()
-s.peopleIndexes([["leetcode","google","facebook"],["google","microsoft"],["google","facebook"],["google"],["amazon"]])
-s.peopleIndexes([["leetcode","google","facebook"],["leetcode","amazon"],["facebook","google"]])
-s.peopleIndexes([["leetcode"],["google"],["facebook"],["amazon"]])
+s.peopleIndexes([["leetcode", "google", "facebook"], ["google", "microsoft"], ["google", "facebook"], ["google"], ["amazon"]])
+s.peopleIndexes([["leetcode", "google", "facebook"], ["leetcode", "amazon"], ["facebook", "google"]])
+s.peopleIndexes([["leetcode"], ["google"], ["facebook"], ["amazon"]])
 
 //: [Next](@next)

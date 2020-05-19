@@ -14,14 +14,10 @@
      The maximum number of consecutive 1s is 3.
  ```
 
-
-
  **Note:**
 
  - The input array will only contain `0` and `1`.
  - The length of input array is a positive integer and will not exceed 10,000
-
-
 
    Hide Hint #1
 
@@ -29,7 +25,6 @@
  */
 
 class Solution {
-    
     //    Runtime: 292 ms, 47.50%
     //    Memory Usage: 21.1 MB
     func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
@@ -44,7 +39,7 @@ class Solution {
         }
         return max(lv, gv)
     }
-    
+
     //    Runtime: 292 ms, 47.50%
     //    Memory Usage: 21.1 MB
     func findMaxConsecutiveOnes0(_ nums: [Int]) -> Int {
@@ -53,8 +48,7 @@ class Solution {
 }
 
 let s = Solution()
-s.findMaxConsecutiveOnes([1,1,0,1,1,1])
-s.findMaxConsecutiveOnes([1,1,0,1,0,0,1])
-
+s.findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1])
+s.findMaxConsecutiveOnes([1, 1, 0, 1, 0, 0, 1])
 
 //: [Next](@next)

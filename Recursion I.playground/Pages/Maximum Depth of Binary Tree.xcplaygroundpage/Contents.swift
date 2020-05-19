@@ -1,8 +1,8 @@
 //: [Previous](@previous)
 
-//Runtime: 32 ms
-//Memory Usage: 21.5 MB
-//beats 66.59%
+// Runtime: 32 ms
+// Memory Usage: 21.5 MB
+// beats 66.59%
 
 class Solution {
     func maxDepth(_ root: TreeNode?) -> Int {

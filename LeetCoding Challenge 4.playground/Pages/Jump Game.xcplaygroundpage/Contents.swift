@@ -28,8 +28,7 @@
  */
 
 class Solution {
-    func canJump(_ nums: [Int]) -> Bool {
-        
+    func canJump(_: [Int]) -> Bool {
         return false
     }
 }

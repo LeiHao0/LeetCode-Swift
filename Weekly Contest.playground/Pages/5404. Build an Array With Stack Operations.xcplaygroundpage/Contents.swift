@@ -8,7 +8,7 @@ class Solution {
                 s.append("Push")
                 j += 1
             } else {
-                s.append(contentsOf: ["Push","Pop"])
+                s.append(contentsOf: ["Push", "Pop"])
             }
             i += 1
         }
@@ -17,11 +17,9 @@ class Solution {
 }
 
 let s = Solution()
-s.buildArray([1,3], 3)
-s.buildArray([1,2,3], 3)
-s.buildArray([1,2], 4)
-s.buildArray([2,3,4], 4)
-
-
+s.buildArray([1, 3], 3)
+s.buildArray([1, 2, 3], 3)
+s.buildArray([1, 2], 4)
+s.buildArray([2, 3, 4], 4)
 
 //: [Next](@next)

@@ -10,9 +10,9 @@ class Solution {
                 digs.append(c)
             }
         }
-        
+
         if abs(digs.count - ints.count) > 1 { return "" }
-        
+
         if digs.count > ints.count {
             var i = 0
             while i < ints.count {
@@ -37,7 +37,7 @@ class Solution {
                 i += 1
             }
         }
-        
+
         return sv
     }
 }
@@ -52,6 +52,5 @@ s.reformat("leetcode")
 s.reformat("1229857369")
 s.reformat("covid2019")
 s.reformat("ab123")
-
 
 //: [Next](@next)

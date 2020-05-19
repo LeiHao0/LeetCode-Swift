@@ -11,8 +11,6 @@
  Similarly, a right shift by 1 means remove the last character of s and add it to the beginning.
  Return the final string after all operations.
 
-  
-
  Example 1:
 
  Input: s = "abc", shift = [[0,1],[1,2]]
@@ -29,7 +27,6 @@
  [1,1] means shift to right by 1. "gabcdef" -> "fgabcde"
  [0,2] means shift to left by 2. "fgabcde" -> "abcdefg"
  [1,3] means shift to right by 3. "abcdefg" -> "efgabcd"
-  
 
  Constraints:
 
@@ -53,6 +50,5 @@ class Solution {
         return String(s[i...]) + String(s[..<i])
     }
 }
-
 
 //: [Next](@next)

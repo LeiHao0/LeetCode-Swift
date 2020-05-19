@@ -1,6 +1,5 @@
 //: [Previous](@previous)
 
-
 /**
  # Search in Rotated Sorted Array
 
@@ -32,32 +31,30 @@
  */
 
 class Solution {
-    
     // 16 ms, 95.99%...
     func search(_ nums: [Int], _ target: Int) -> Int {
-        var i = 0, j = nums.count-1
+        var i = 0, j = nums.count - 1
         while i <= j {
-            let mid = i + (j - i)/2
+            let mid = i + (j - i) / 2
             if nums[mid] == target {
                 return mid
             } else if nums[mid] >= nums[i] {
-                (target >= nums[i] && target < nums[mid]) ? (j = mid-1) : (i = mid+1)
+                (target >= nums[i] && target < nums[mid]) ? (j = mid - 1) : (i = mid + 1)
             } else {
-                (target <= nums[j] && target > nums[mid]) ? (i = mid+1) : (j = mid-1)
+                (target <= nums[j] && target > nums[mid]) ? (i = mid + 1) : (j = mid - 1)
             }
         }
         return -1
     }
-    
+
     // 16 ms, 95.99%, 😂
     func search0(_ nums: [Int], _ target: Int) -> Int {
         return nums.firstIndex(of: target) ?? -1
     }
-    
 }
 
 let s = Solution()
-s.search([4,5,6,7,0,1,2], 0) // 4
-s.search([4,5,6,7,0,1,2], 3) // -1
+s.search([4, 5, 6, 7, 0, 1, 2], 0) // 4
+s.search([4, 5, 6, 7, 0, 1, 2], 3) // -1
 
 //: [Next](@next)

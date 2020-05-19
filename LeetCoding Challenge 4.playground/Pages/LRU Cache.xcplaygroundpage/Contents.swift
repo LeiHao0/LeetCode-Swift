@@ -1,6 +1,5 @@
 //: [Previous](@previous)
 
-
 /**
  # LRU Cache
 
@@ -32,23 +31,22 @@
  */
 
 class LRUCache {
-
     var dict = [Int: Int]()
     var keys = [Int]()
     var p = 0
     var capacity = 0
-    
+
     init(_ capacity: Int) {
         p = 0
         dict = [:]
         keys = []
         self.capacity = capacity
     }
-    
+
     func get(_ key: Int) -> Int {
         return dict[key] ?? -1
     }
-    
+
     func put(_ key: Int, _ value: Int) {
         if dict[key] != nil {
             dict[key] = value
@@ -58,8 +56,8 @@ class LRUCache {
                 dict[key] = value
                 p += 1
             } else {
-                dict.removeValue(forKey: keys[p-1])
-                keys[p-1] = key
+                dict.removeValue(forKey: keys[p - 1])
+                keys[p - 1] = key
                 dict[key] = value
                 p -= 1
             }
@@ -67,17 +65,15 @@ class LRUCache {
     }
 }
 
-let c = LRUCache(2);
-c.put(1, 1);
-c.put(2, 2);
-c.get(1);       // returns 1
-c.put(3, 3);    // evicts key 2
-c.get(2);       // returns -1 (not found)
-c.put(4, 4);    // evicts key 1
-c.get(1);       // returns -1 (not found)
-c.get(3);       // returns 3
-c.get(4);       // returns 4
-
+let c = LRUCache(2)
+c.put(1, 1)
+c.put(2, 2)
+c.get(1) // returns 1
+c.put(3, 3) // evicts key 2
+c.get(2) // returns -1 (not found)
+c.put(4, 4) // evicts key 1
+c.get(1) // returns -1 (not found)
+c.get(3) // returns 3
+c.get(4) // returns 4
 
 //: [Next](@next)
-

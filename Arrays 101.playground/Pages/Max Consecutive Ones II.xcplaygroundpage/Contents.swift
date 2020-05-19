@@ -11,17 +11,17 @@ class Solution {
                 z0 = z1
                 z1 = 0
             }
-            maxZ = max(maxZ, z0+z1+1)
+            maxZ = max(maxZ, z0 + z1 + 1)
         }
         return min(maxZ, nums.count)
     }
 }
 
 let s = Solution()
-s.findMaxConsecutiveOnes([1,0,1,1,0])
-s.findMaxConsecutiveOnes([1,0,0,1,1,0])
-s.findMaxConsecutiveOnes([0,0,0,0,0,0,1,0])
-s.findMaxConsecutiveOnes([0,0,0,0,0,0,0])
-s.findMaxConsecutiveOnes([1,1,1,1,1])
+s.findMaxConsecutiveOnes([1, 0, 1, 1, 0])
+s.findMaxConsecutiveOnes([1, 0, 0, 1, 1, 0])
+s.findMaxConsecutiveOnes([0, 0, 0, 0, 0, 0, 1, 0])
+s.findMaxConsecutiveOnes([0, 0, 0, 0, 0, 0, 0])
+s.findMaxConsecutiveOnes([1, 1, 1, 1, 1])
 
 //: [Next](@next)

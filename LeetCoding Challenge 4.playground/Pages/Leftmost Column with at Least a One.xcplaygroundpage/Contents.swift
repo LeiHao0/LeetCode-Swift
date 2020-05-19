@@ -18,8 +18,6 @@
 
  For custom testing purposes you're given the binary matrix `mat` as input in the following four examples. You will not have access the binary matrix directly.
 
-  
-
  **Example 1:**
 
  **![img](https://assets.leetcode.com/uploads/2019/10/25/untitled-diagram-5.jpg)**
@@ -56,8 +54,6 @@
  Output: 1
  ```
 
-  
-
  **Constraints:**
 
  - `1 <= mat.length, mat[i].length <= 100`
@@ -65,41 +61,40 @@
  - `mat[i]` is sorted in a non-decreasing way.
  */
 
-
 class Solution {
     // 80ms, 90,49%
     func leftMostColumnWithOne(_ binaryMatrix: BinaryMatrix) -> Int {
         let nm = binaryMatrix.dimensions(), n = nm[0], m = nm[1]
-        var i = 0, j = m-1
-        while i < n, j  >= 0 {
+        var i = 0, j = m - 1
+        while i < n, j >= 0 {
             binaryMatrix.get(i, j) == 1 ? (j -= 1) : (i += 1)
         }
-        return (j == m-1) ? -1 : j + 1
+        return (j == m - 1) ? -1 : j + 1
     }
 }
 
 let s = Solution()
 
-var bm = BinaryMatrix([[0,0],[1,1]])
+var bm = BinaryMatrix([[0, 0], [1, 1]])
 s.leftMostColumnWithOne(bm) // 0
 
-bm = BinaryMatrix([[0,0],[0,1]])
+bm = BinaryMatrix([[0, 0], [0, 1]])
 s.leftMostColumnWithOne(bm) // 1
 
-bm = BinaryMatrix([[0,0],[0,0]])
+bm = BinaryMatrix([[0, 0], [0, 0]])
 s.leftMostColumnWithOne(bm) // -1
 
-bm = BinaryMatrix([[0,0,0,1],
-                   [0,0,1,1],
-                   [0,1,1,1]])
+bm = BinaryMatrix([[0, 0, 0, 1],
+                   [0, 0, 1, 1],
+                   [0, 1, 1, 1]])
 s.leftMostColumnWithOne(bm) // 1
 
-bm = BinaryMatrix([[0,0,0,0,1,1],
-                   [0,0,0,1,1,1],
-                   [0,0,0,0,1,1],
-                   [0,0,0,0,1,1],
-                   [0,0,0,1,1,1],
-                   [0,0,0,1,1,1]])
+bm = BinaryMatrix([[0, 0, 0, 0, 1, 1],
+                   [0, 0, 0, 1, 1, 1],
+                   [0, 0, 0, 0, 1, 1],
+                   [0, 0, 0, 0, 1, 1],
+                   [0, 0, 0, 1, 1, 1],
+                   [0, 0, 0, 1, 1, 1]])
 s.leftMostColumnWithOne(bm) // 3
 
 //: [Next](@next)

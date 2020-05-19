@@ -15,8 +15,6 @@
 
  If the town judge exists and can be identified, return the label of the town judge. Otherwise, return `-1`.
 
-  
-
  **Example 1:**
 
  ```
@@ -52,8 +50,6 @@
  Output: 3
  ```
 
-  
-
  **Note:**
 
  1. `1 <= N <= 1000`
@@ -63,37 +59,36 @@
  5. `1 <= trust[i][0], trust[i][1] <= N`
  */
 
-
 class Solution {
     // 800ms, 98.04%
     func findJudge(_ N: Int, _ trust: [[Int]]) -> Int {
-        if trust.count < N-1 { return -1 }
-        var inDegrees = Array(repeating: 0, count: N+1), outDegrees = inDegrees
+        if trust.count < N - 1 { return -1 }
+        var inDegrees = Array(repeating: 0, count: N + 1), outDegrees = inDegrees
         for t in trust {
             outDegrees[t[0]] += 1
             inDegrees[t[1]] += 1
         }
-        for i in 1...N {
-            if inDegrees[i] == N-1 && outDegrees[i] == 0 {
+        for i in 1 ... N {
+            if inDegrees[i] == N - 1, outDegrees[i] == 0 {
                 return i
             }
         }
         return -1
     }
-    
+
     // 852ms, 52.94%
     func findJudge0(_ N: Int, _ trust: [[Int]]) -> Int {
-        var trusts = Array(repeating: 0, count: N+1), gMax = [1, 0]
+        var trusts = Array(repeating: 0, count: N + 1), gMax = [1, 0]
         for t in trust {
             trusts[t[1]] += 1
             if trusts[t[1]] > gMax[1] {
                 gMax = [t[1], trusts[t[1]]]
             }
         }
-        if gMax[1] != N-1 {
+        if gMax[1] != N - 1 {
             return -1
         } else {
-            let judgeTrusts = trust.filter({ $0[0] == gMax[0]})
+            let judgeTrusts = trust.filter { $0[0] == gMax[0] }
             return judgeTrusts.isEmpty ? gMax[0] : -1
         }
     }
@@ -101,10 +96,10 @@ class Solution {
 
 let s = Solution()
 s.findJudge(1, []) == 1
-s.findJudge(2, [[1,2]]) == 2
-s.findJudge(3, [[1,3],[2,3]]) == 3
-s.findJudge(3, [[1,3],[2,3],[3,1]]) == -1
-s.findJudge(3, [[1,2],[2,3]]) == -1
-s.findJudge(4, [[1,3],[1,4],[2,3],[2,4],[4,3]]) == 3
+s.findJudge(2, [[1, 2]]) == 2
+s.findJudge(3, [[1, 3], [2, 3]]) == 3
+s.findJudge(3, [[1, 3], [2, 3], [3, 1]]) == -1
+s.findJudge(3, [[1, 2], [2, 3]]) == -1
+s.findJudge(4, [[1, 3], [1, 4], [2, 3], [2, 4], [4, 3]]) == 3
 
 //: [Next](@next)

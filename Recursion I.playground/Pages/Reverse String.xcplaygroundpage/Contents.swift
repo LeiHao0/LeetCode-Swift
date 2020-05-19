@@ -7,7 +7,7 @@ class Solution {
 }
 
 let s = Solution()
-var a:[Character] = ["h","e","l","l","o"]
+var a: [Character] = ["h", "e", "l", "l", "o"]
 s.reverseString(&a)
 print(a)
 a = ["a"]
@@ -17,7 +17,7 @@ a = []
 s.reverseString(&a)
 print(a)
 
-a = ["H","a","n","n","a","h"]
+a = ["H", "a", "n", "n", "a", "h"]
 s.reverseString(&a)
 print(a)
 

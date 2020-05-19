@@ -16,21 +16,14 @@ class Solution {
 
 let s = Solution()
 
-
-
 let h = ListNode(1)
 h.next = ListNode(2)
 h.next?.next = ListNode(3)
 
-
 s.middleNode(h)?.val
-
 
 h.next?.next?.next = ListNode(4)
 
-
 s.middleNode(h)?.val
-
-
 
 //: [Next](@next)

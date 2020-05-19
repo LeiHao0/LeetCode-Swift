@@ -3,12 +3,9 @@
 // TODO:
 
 class Solution {
-    func minNumberOfFrogs(_ croakOfFrogs: String) -> Int {
-        
+    func minNumberOfFrogs(_: String) -> Int {
         return 0
     }
 }
-
-
 
 //: [Next](@next)

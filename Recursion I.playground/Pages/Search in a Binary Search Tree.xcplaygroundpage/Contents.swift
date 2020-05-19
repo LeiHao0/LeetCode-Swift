@@ -1,7 +1,7 @@
 //: [Previous](@previous)
 
-//Runtime: 176 ms
-//Memory Usage: 21 MB
+// Runtime: 176 ms
+// Memory Usage: 21 MB
 
 class Solution {
     func searchBST(_ root: TreeNode?, _ val: Int) -> TreeNode? {
@@ -14,7 +14,6 @@ class Solution {
         }
     }
 }
-
 
 let t = TreeNode(4)
 t.left = TreeNode(2)

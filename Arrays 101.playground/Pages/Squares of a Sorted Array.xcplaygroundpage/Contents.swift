@@ -3,9 +3,9 @@
 class Solution {
     // 292 ms, 64.73%
     func sortedSquares(_ A: [Int]) -> [Int] {
-        let m = Int(A.firstIndex(where: {$0 >= 0 }) ?? 0)
-        var arr = Array(repeating: 0, count: A.count),  i = 0, j = 0, k = 0
-        let a = A.map({$0*$0})
+        let m = Int(A.firstIndex(where: { $0 >= 0 }) ?? 0)
+        var arr = Array(repeating: 0, count: A.count), i = 0, j = 0, k = 0
+        let a = A.map { $0 * $0 }
         let a0 = Array(a[..<m].reversed()), a1 = Array(a[m...])
         while i < a0.count, j < a1.count {
             if a0[i] < a1[j] {

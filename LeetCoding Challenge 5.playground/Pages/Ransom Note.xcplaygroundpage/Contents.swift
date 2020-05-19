@@ -22,14 +22,14 @@ import Foundation
 class Solution {
     // 104ms, 62.12%
     func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
-        var dict = Dictionary<Character, Int>()
+        var dict = [Character: Int]()
         for c in magazine { dict[c] = ((dict[c] ?? 0) + 1) }
         for c in ransomNote { dict[c] = ((dict[c] ?? 0) - 1); if dict[c]! < 0 { return false } }
         return true
     }
-    
+
     func canConstruct0(_ ransomNote: String, _ magazine: String) -> Bool {
-        var dictR = Dictionary<Character, Int>(), dictM = Dictionary<Character, Int>()
+        var dictR = [Character: Int](), dictM = [Character: Int]()
         for c in ransomNote { dictR[c] = ((dictR[c] ?? 0) + 1) }
         for c in magazine { dictM[c] = ((dictM[c] ?? 0) + 1) }
         for (k, v) in dictR {
@@ -50,6 +50,5 @@ s.canConstruct("a", "a")
 s.canConstruct("fffbfg", "effjfggbffjdgbjjhhdegh")
 
 s.canConstruct("bjaajgea", "affhiiicabhbdchbidghccijjbfjfhjeddgggbajhidhjchiedhdibgeaecffbbbefiabjdhggihccec")
-
 
 //: [Next](@next)

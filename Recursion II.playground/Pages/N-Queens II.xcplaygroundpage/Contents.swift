@@ -30,8 +30,7 @@
  */
 
 class Solution {
-    func totalNQueens(_ n: Int) -> Int {
-        
+    func totalNQueens(_: Int) -> Int {
         return 0
     }
 }

@@ -20,6 +20,6 @@ class Solution {
 }
 
 let s = Solution()
-s.thirdMax([2,2,3,1])
+s.thirdMax([2, 2, 3, 1])
 
 //: [Next](@next)
