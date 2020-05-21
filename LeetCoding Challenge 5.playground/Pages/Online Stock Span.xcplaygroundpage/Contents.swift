@@ -37,15 +37,17 @@
  */
 
 class StockSpanner {
-    private var stack = [(Int, Int)]()
+    // 1112ms, 10%
+    private struct Unit { let price, value: Int }
+    private var stack = [Unit]()
     func next(_ price: Int) -> Int {
-        var ans = 1
-        while let last = stack.last, last.0 <= price {
+        var value = 1
+        while let last = stack.last, last.price <= price {
             stack.popLast()
-            ans += last.1
+            value += last.value
         }
-        stack.append((price, ans))
-        return ans
+        stack.append(Unit(price: price, value: value))
+        return value
     }
 }
 
