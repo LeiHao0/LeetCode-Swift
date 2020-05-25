@@ -16,5 +16,7 @@
         <page name='5412. Number of Students Doing Homework at a Given Time'/>
         <page name='5413. Rearrange Words in a Sentence'/>
         <page name='5414. People Whose List of Favorite Companies Is Not a Subset of Another List'/>
+        <page name='5416. Check If a Word Occurs As a Prefix of Any Word in a Sentence'/>
+        <page name='5417. Maximum Number of Vowels in a Substring of Given Length'/>
     </pages>
 </playground>

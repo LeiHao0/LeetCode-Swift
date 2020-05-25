@@ -23,5 +23,7 @@
         <page name='Count Square Submatrices with All Ones'/>
         <page name='Sort Characters By Frequency'/>
         <page name='Interval List Intersections'/>
+        <page name='Construct Binary Search Tree from Preorder Traversal'/>
+        <page name='Uncrossed Lines'/>
     </pages>
 </playground>
