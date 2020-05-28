@@ -25,5 +25,6 @@
         <page name='Interval List Intersections'/>
         <page name='Construct Binary Search Tree from Preorder Traversal'/>
         <page name='Uncrossed Lines'/>
+        <page name='Possible Bipartition'/>
     </pages>
 </playground>
