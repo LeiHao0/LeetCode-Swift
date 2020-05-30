@@ -18,5 +18,7 @@
         <page name='5414. People Whose List of Favorite Companies Is Not a Subset of Another List'/>
         <page name='5416. Check If a Word Occurs As a Prefix of Any Word in a Sentence'/>
         <page name='5417. Maximum Number of Vowels in a Substring of Given Length'/>
+        <page name='5408. Make Two Arrays Equal by Reversing Sub-arrays'/>
+        <page name='5409. Check If a String Contains All Binary Codes of Size K'/>
     </pages>
 </playground>
