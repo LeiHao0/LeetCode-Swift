@@ -4,20 +4,19 @@ import Foundation
 
 class Solution {
     func hasAllCodes(_ s: String, _ k: Int) -> Bool {
-        let strs = (1..<k).reduce(["1", "0"]) { (v, _) in
-            v.map({ $0 + "0" }) + v.map({ $0 + "1" })
+        if s.count <= k { return false }
+        let s = Array(s)
+        var set = Set<String>()
+        for i in 0...(s.count-k) {
+            set.insert(String(s[i..<i+k]))
         }
-        for str in strs {
-            if !s.contains(str) {
-                return false
-            }
-        }
-        return true
+        return set.count == (2 << (k-1))
     }
 }
 
 let s = Solution()
-s.hasAllCodes("11", 3)
+s.hasAllCodes("00110110", 2)
+s.hasAllCodes("0101", 13)
 
 
 //: [Next](@next)
