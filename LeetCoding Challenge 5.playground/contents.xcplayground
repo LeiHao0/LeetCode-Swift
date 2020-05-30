@@ -28,5 +28,6 @@
         <page name='Possible Bipartition'/>
         <page name='Counting Bits'/>
         <page name='Course Schedule'/>
+        <page name='K Closest Points to Origin'/>
     </pages>
 </playground>
