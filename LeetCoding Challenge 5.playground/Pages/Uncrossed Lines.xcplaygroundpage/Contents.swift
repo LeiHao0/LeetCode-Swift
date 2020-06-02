@@ -14,8 +14,6 @@
 
  Return the maximum number of connecting lines we can draw in this way.
 
-  
-
  **Example 1:**
 
  ![img](https://assets.leetcode.com/uploads/2019/04/26/142.png)
@@ -41,8 +39,6 @@
  Output: 2
  ```
 
-  
-
  **Note:**
 
  1. `1 <= A.length <= 500`
@@ -57,10 +53,10 @@
 class Solution {
     // 44ms, 100%
     func maxUncrossedLines(_ A: [Int], _ B: [Int]) -> Int {
-        var dp = Array(repeating: Array(repeating: 0, count: B.count+1), count: A.count+1)
-        for i in 1...A.count {
-            for j in 1...B.count {
-                dp[i][j] = (A[i-1] == B[j-1]) ? (1 + dp[i-1][j-1]) : max(dp[i-1][j], dp[i][j-1])
+        var dp = Array(repeating: Array(repeating: 0, count: B.count + 1), count: A.count + 1)
+        for i in 1 ... A.count {
+            for j in 1 ... B.count {
+                dp[i][j] = (A[i - 1] == B[j - 1]) ? (1 + dp[i - 1][j - 1]) : max(dp[i - 1][j], dp[i][j - 1])
             }
         }
         return dp[A.count][B.count]
@@ -68,10 +64,8 @@ class Solution {
 }
 
 let s = Solution()
-s.maxUncrossedLines([1,4,2], [1,2,4]) // 2
-s.maxUncrossedLines([2,5,1,2,5], [10,5,2,1,5,2]) // 3
-s.maxUncrossedLines([1,3,7,1,7,5], [1,9,2,5,1]) // 2
-
-
+s.maxUncrossedLines([1, 4, 2], [1, 2, 4]) // 2
+s.maxUncrossedLines([2, 5, 1, 2, 5], [10, 5, 2, 1, 5, 2]) // 3
+s.maxUncrossedLines([1, 3, 7, 1, 7, 5], [1, 9, 2, 5, 1]) // 2
 
 //: [Next](@next)

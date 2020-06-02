@@ -50,7 +50,7 @@ class Solution {
             $0 + String(repeating: $1.key, count: $1.value)
         }
     }
-    
+
     // 140ms, 33.33%, O(N)
     func frequencySort(_ s: String) -> String {
         var dict = [Character: Int](), maxValue = 0
@@ -58,21 +58,21 @@ class Solution {
             dict[c, default: 0] += 1
             maxValue = max(maxValue, dict[c]!)
         }
-        var buckets = Array(repeating: [Character](), count: maxValue+1)
+        var buckets = Array(repeating: [Character](), count: maxValue + 1)
         for (k, v) in dict {
             buckets[v].append(k)
         }
-        var i = buckets.count-1, ans = ""
+        var i = buckets.count - 1, ans = ""
         while i > 0 {
             buckets[i].forEach { ans += String(repeating: $0, count: i) }
             i -= 1
         }
         return ans
     }
-    
+
     // 436ms
     func frequencySort1(_ s: String) -> String {
-        var buckets = Array(repeating: [Character](), count: s.count+1)
+        var buckets = Array(repeating: [Character](), count: s.count + 1)
         for (k, v) in s.reduce(into: [:], { $0[$1, default: 0] += 1 }) {
             buckets[v].append(k)
         }
@@ -84,6 +84,5 @@ class Solution {
 
 let s = Solution()
 s.frequencySort("tree")
-
 
 //: [Next](@next)

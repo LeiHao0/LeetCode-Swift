@@ -6,7 +6,7 @@ class Solution {
     func isPrefixOfWord(_ sentence: String, _ searchWord: String) -> Int {
         let arr = sentence.split(separator: " ")
         if let i = arr.firstIndex(where: { $0.hasPrefix(searchWord) }) {
-            return i+1
+            return i + 1
         } else {
             return -1
         }

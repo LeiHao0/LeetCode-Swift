@@ -5,8 +5,6 @@
 
  Given a `m * n` matrix of ones and zeros, return how many **square** submatrices have all ones.
 
-  
-
  **Example 1:**
 
  ```
@@ -40,8 +38,6 @@
  Total number of squares = 6 + 1 = 7.
  ```
 
-  
-
  **Constraints:**
 
  - `1 <= arr.length <= 300`
@@ -60,10 +56,10 @@
 class Solution {
     // 528ms, 46.67%
     func countSquares(_ matrix: [[Int]]) -> Int {
-        var matrix = matrix, ans = matrix[0][1...].reduce(0, +) + matrix.map({$0[0]}).reduce(0, +)
-        for i in 1..<matrix.count {
-            for j in 1..<matrix[0].count {
-                let mi = min(matrix[i-1][j], matrix[i][j-1], matrix[i-1][j-1])
+        var matrix = matrix, ans = matrix[0][1...].reduce(0, +) + matrix.map { $0[0] }.reduce(0, +)
+        for i in 1 ..< matrix.count {
+            for j in 1 ..< matrix[0].count {
+                let mi = min(matrix[i - 1][j], matrix[i][j - 1], matrix[i - 1][j - 1])
                 if mi >= 1, matrix[i][j] >= 1 {
                     matrix[i][j] = mi + 1
                 }
@@ -72,13 +68,13 @@ class Solution {
         }
         return ans
     }
-    
+
     // 748ms, 8.89%
     func countSquares0(_ matrix: [[Int]]) -> Int {
         var matrix = matrix
-        for i in 1..<matrix.count {
-            for j in 1..<matrix[0].count {
-                let mi = min(matrix[i-1][j], matrix[i][j-1], matrix[i-1][j-1])
+        for i in 1 ..< matrix.count {
+            for j in 1 ..< matrix[0].count {
+                let mi = min(matrix[i - 1][j], matrix[i][j - 1], matrix[i - 1][j - 1])
                 if mi >= 1, matrix[i][j] >= 1 {
                     matrix[i][j] = mi + 1
                 }
@@ -90,20 +86,21 @@ class Solution {
 
 let s = Solution()
 s.countSquares([
-  [0,1,1,1],
-  [1,1,1,1],
-  [0,1,1,1]
+    [0, 1, 1, 1],
+    [1, 1, 1, 1],
+    [0, 1, 1, 1],
 ])
 s.countSquares([
-  [1,0,1],
-  [1,1,0],
-  [1,1,0]
+    [1, 0, 1],
+    [1, 1, 0],
+    [1, 1, 0],
 ])
 s.countSquares([
-    [0,0,0],
-    [0,1,0],
-    [0,1,0],
-    [1,1,1],
-    [1,1,0]])
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 1, 0],
+    [1, 1, 1],
+    [1, 1, 0],
+])
 
 //: [Next](@next)

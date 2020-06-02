@@ -7,16 +7,15 @@ class Solution {
         if s.count <= k { return false }
         let s = Array(s)
         var set = Set<String>()
-        for i in 0...(s.count-k) {
-            set.insert(String(s[i..<i+k]))
+        for i in 0 ... (s.count - k) {
+            set.insert(String(s[i ..< i + k]))
         }
-        return set.count == (2 << (k-1))
+        return set.count == (2 << (k - 1))
     }
 }
 
 let s = Solution()
 s.hasAllCodes("00110110", 2)
 s.hasAllCodes("0101", 13)
-
 
 //: [Next](@next)

@@ -29,5 +29,6 @@
         <page name='Counting Bits'/>
         <page name='Course Schedule'/>
         <page name='K Closest Points to Origin'/>
+        <page name='Edit Distance'/>
     </pages>
 </playground>

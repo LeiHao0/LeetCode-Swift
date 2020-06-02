@@ -9,8 +9,6 @@
 
  Given the total number of courses and a list of prerequisite **pairs**, is it possible for you to finish all courses?
 
-  
-
  **Example 1:**
 
  ```
@@ -29,8 +27,6 @@
               To take course 1 you should have finished course 0, and to take course 0 you should
               also have finished course 1. So it is impossible.
  ```
-
-  
 
  **Constraints:**
 
@@ -58,12 +54,12 @@ class Solution {
         for prerequisite in prerequisites {
             dict[prerequisite[0], default: []].append(prerequisite[1])
         }
-        for i in 0..<numCourses {
+        for i in 0 ..< numCourses {
             if isCycle(i) { return false }
         }
         return true
     }
-    
+
     private var checked, path: [Bool]!, dict = [Int: [Int]]()
     private func isCycle(_ i: Int) -> Bool {
         if checked[i] { return false }
@@ -81,9 +77,8 @@ class Solution {
 }
 
 let s = Solution()
-s.canFinish(2, [[1,0]])
-s.canFinish(2, [[1,0], [0,1]])
-s.canFinish(3, [[1,0],[1,2],[0,1]])
-
+s.canFinish(2, [[1, 0]])
+s.canFinish(2, [[1, 0], [0, 1]])
+s.canFinish(3, [[1, 0], [1, 2], [0, 1]])
 
 //: [Next](@next)

@@ -7,8 +7,8 @@ class Solution {
         if k > s.count { return 0 }
         let vowels = Set("aeiou"), s = Array(s)
         var ans = 0
-        for i in 0...(s.count-k) {
-            let v = s[i..<i+k].reduce(0) { $0 + (vowels.contains($1) ? 1 : 0) }
+        for i in 0 ... (s.count - k) {
+            let v = s[i ..< i + k].reduce(0) { $0 + (vowels.contains($1) ? 1 : 0) }
             ans = max(ans, v)
             if ans == k { break }
         }

@@ -9,8 +9,6 @@
 
  You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in.)
 
-  
-
  **Example 1:**
 
  ```
@@ -31,8 +29,6 @@
  (The answer [[-2,4],[3,3]] would also be accepted.)
  ```
 
-  
-
  **Note:**
 
  1. `1 <= K <= points.length <= 10000`
@@ -44,17 +40,17 @@ import Foundation
 class Solution {
     // 1040 ms, 81.20%
     func kClosest(_ points: [[Int]], _ K: Int) -> [[Int]] {
-        return Array(points.sorted { ($0[0]*$0[0] + $0[1]*$0[1]) < ($1[0]*$1[0]+$1[1]*$1[1]) }[..<K])
+        return Array(points.sorted { ($0[0] * $0[0] + $0[1] * $0[1]) < ($1[0] * $1[0] + $1[1] * $1[1]) }[..<K])
     }
-    
+
     // 1072ms, 79.20%
     func kClosest0(_ points: [[Int]], _ K: Int) -> [[Int]] {
-        return points.map { $0[0]*$0[0] + $0[1]*$0[1] }.enumerated().sorted { $0.element < $1.element }[..<K].map { points[$0.offset] }
+        return points.map { $0[0] * $0[0] + $0[1] * $0[1] }.enumerated().sorted { $0.element < $1.element }[..<K].map { points[$0.offset] }
     }
 }
 
 let s = Solution()
-s.kClosest([[1,3],[-2,2]], 1)
-s.kClosest([[3,3],[5,-1],[-2,4]], 2)
+s.kClosest([[1, 3], [-2, 2]], 1)
+s.kClosest([[3, 3], [5, -1], [-2, 4]], 2)
 
 //: [Next](@next)

@@ -41,16 +41,16 @@
 class Solution {
     // 60ms, 100%
     func countBits(_ num: Int) -> [Int] {
-        var ans = Array(repeating: 0, count: num+1)
-        for i in 0...num {
-            ans[i] = ans[i>>1] + (i&1) // ans[i/2] + i%2
+        var ans = Array(repeating: 0, count: num + 1)
+        for i in 0 ... num {
+            ans[i] = ans[i >> 1] + (i & 1) // ans[i/2] + i%2
         }
         return ans
     }
-    
+
     // 76ms, 40.40%
     func countBits0(_ num: Int) -> [Int] {
-        return (0...num).map { $0.nonzeroBitCount }
+        return (0 ... num).map { $0.nonzeroBitCount }
     }
 }
 
@@ -59,7 +59,7 @@ s.countBits(0)
 s.countBits(2)
 s.countBits(5)
 
-(0...100).forEach {
+(0 ... 100).forEach {
     print(String($0, radix: 2))
 }
 

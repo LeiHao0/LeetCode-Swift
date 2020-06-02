@@ -8,9 +8,9 @@ class Solution {
             j += 1
         }
         i = j - 1
-        
+
         while i >= 0, j < A.count {
-            let (ai, aj) = (A[i]*A[i], A[j]*A[j])
+            let (ai, aj) = (A[i] * A[i], A[j] * A[j])
             ai < aj ? (ans[k] = ai, i -= 1) : (ans[k] = aj, j += 1)
             k += 1
         }
@@ -26,7 +26,7 @@ class Solution {
         }
         return ans
     }
-    
+
     // 264ms, 89.27%
     func sortedSquares1(_ A: [Int]) -> [Int] {
         var i = 0, j = 0, k = 0, ans = A
@@ -34,16 +34,16 @@ class Solution {
             j += 1
         }
         i = j - 1
-        
+
         while i >= 0, j < A.count {
-            let (ai, aj) = (A[i]*A[i], A[j]*A[j])
+            let (ai, aj) = (A[i] * A[i], A[j] * A[j])
             ai < aj ? (ans[k] = ai, i -= 1) : (ans[k] = aj, j += 1)
             k += 1
         }
-      
+
         return ans
     }
-    
+
     // 292 ms, 64.73%
     func sortedSquares0(_ A: [Int]) -> [Int] {
         let m = Int(A.firstIndex(where: { $0 >= 0 }) ?? 0)
@@ -75,8 +75,7 @@ class Solution {
 }
 
 let s = Solution()
-s.sortedSquares([-4,-1,0,3,10])
-s.sortedSquares([-7,-3,2,3,11])
-
+s.sortedSquares([-4, -1, 0, 3, 10])
+s.sortedSquares([-7, -3, 2, 3, 11])
 
 //: [Next](@next)

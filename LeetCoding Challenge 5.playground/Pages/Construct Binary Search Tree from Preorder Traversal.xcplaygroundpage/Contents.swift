@@ -16,8 +16,6 @@
  Output: [8,5,10,1,7,null,12]
  ```
 
-  
-
  **Constraints:**
 
  - `1 <= preorder.length <= 100`
@@ -25,37 +23,36 @@
  - The values of `preorder` are distinct.
  */
 
-
 class Solution {
     // 12ms, 66.93%
     func bstFromPreorder(_ preorder: [Int]) -> TreeNode? {
         guard let v = preorder.first else { return nil }
-        
+
         let root = TreeNode(v)
-        if let i = preorder.firstIndex(where: {$0 > v}) {
-            root.left = bstFromPreorder(Array(preorder[1..<i]))
+        if let i = preorder.firstIndex(where: { $0 > v }) {
+            root.left = bstFromPreorder(Array(preorder[1 ..< i]))
             root.right = bstFromPreorder(Array(preorder[i...]))
         } else {
-            root.left =  bstFromPreorder(Array(preorder[1...]))
+            root.left = bstFromPreorder(Array(preorder[1...]))
         }
         return root
     }
-    
+
     // 12ms, 66.93%
     func bstFromPreorder1(_ preorder: [Int]) -> TreeNode? {
         guard let v = preorder.first else { return nil }
-        
+
         let root = TreeNode(v)
-        var i = 1, j = preorder.count-1
+        var i = 1, j = preorder.count - 1
         while i <= j {
-            let m = i+(j-i)/2
-            preorder[m] < v ? (i = m+1) : (j = m-1)
+            let m = i + (j - i) / 2
+            preorder[m] < v ? (i = m + 1) : (j = m - 1)
         }
         if i >= 1 {
-            root.left = bstFromPreorder(Array(preorder[1..<i]))
+            root.left = bstFromPreorder(Array(preorder[1 ..< i]))
             root.right = bstFromPreorder(Array(preorder[i...]))
         } else {
-            root.left =  bstFromPreorder(Array(preorder[1...]))
+            root.left = bstFromPreorder(Array(preorder[1...]))
         }
         return root
     }
@@ -63,13 +60,13 @@ class Solution {
     // 12ms, 66.93%
     func bstFromPreorder0(_ preorder: [Int]) -> TreeNode? {
         guard let v = preorder.first else { return nil }
-        
+
         let root = TreeNode(v)
-        if let i = preorder.firstIndex(where: {$0 > v}) {
-            root.left = bstFromPreorder(Array(preorder[1..<i]))
+        if let i = preorder.firstIndex(where: { $0 > v }) {
+            root.left = bstFromPreorder(Array(preorder[1 ..< i]))
             root.right = bstFromPreorder(Array(preorder[i...]))
         } else {
-            root.left =  bstFromPreorder(Array(preorder[1...]))
+            root.left = bstFromPreorder(Array(preorder[1...]))
         }
         return root
     }

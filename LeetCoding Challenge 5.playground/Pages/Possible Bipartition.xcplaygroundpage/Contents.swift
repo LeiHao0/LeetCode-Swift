@@ -11,8 +11,6 @@
 
  Return `true` if and only if it is possible to split everyone into two groups in this way.
 
-  
-
  **Example 1:**
 
  ```
@@ -35,8 +33,6 @@
  Output: false
  ```
 
-  
-
  **Note:**
 
  1. `1 <= N <= 2000`
@@ -47,22 +43,20 @@
  */
 
 class Solution {
-    
     // 880ms, 58.82%
     func possibleBipartition(_ N: Int, _ dislikes: [[Int]]) -> Bool {
-        graph = Array(repeating: [Int](), count: N+1)
+        graph = Array(repeating: [Int](), count: N + 1)
         for dislike in dislikes {
             let d0 = dislike[0], d1 = dislike[1]
             graph[d0].append(d1)
             graph[d1].append(d0)
         }
-        for node in 1...N {
-            if color[node] == nil && !dfs(node, 0) { return false }
+        for node in 1 ... N {
+            if color[node] == nil, !dfs(node, 0) { return false }
         }
         return true
     }
-    
-    
+
     private var graph = [[Int]]()
     private var color = [Int: Int]()
     private func dfs(_ node: Int, _ c: Int) -> Bool {
@@ -76,14 +70,11 @@ class Solution {
 }
 
 let s = Solution()
-s.possibleBipartition(4, [[1,2],[1,3],[2,4]])
-s.possibleBipartition(3, [[1,2],[1,3],[2,3]])
-s.possibleBipartition(5, [[1,2],[2,3],[3,4],[4,5],[1,5]])
+s.possibleBipartition(4, [[1, 2], [1, 3], [2, 4]])
+s.possibleBipartition(3, [[1, 2], [1, 3], [2, 3]])
+s.possibleBipartition(5, [[1, 2], [2, 3], [3, 4], [4, 5], [1, 5]])
 s.possibleBipartition(1, [])
-s.possibleBipartition(5, [[1,2],[3,4],[4,5],[3,5]])
-s.possibleBipartition(10, [[4,7],[4,8],[2,8],[8,9],[1,6],[5,8],[1,2],[6,7],[3,10],[8,10],[1,5],[7,10],[1,10],[3,5],[3,6],[1,4],[3,9],[2,3],[1,9],[7,9],[2,7],[6,8],[5,7],[3,4]])
-
-
-
+s.possibleBipartition(5, [[1, 2], [3, 4], [4, 5], [3, 5]])
+s.possibleBipartition(10, [[4, 7], [4, 8], [2, 8], [8, 9], [1, 6], [5, 8], [1, 2], [6, 7], [3, 10], [8, 10], [1, 5], [7, 10], [1, 10], [3, 5], [3, 6], [1, 4], [3, 9], [2, 3], [1, 9], [7, 9], [2, 7], [6, 8], [5, 7], [3, 4]])
 
 //: [Next](@next)

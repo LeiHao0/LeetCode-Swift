@@ -6,5 +6,4 @@ class Solution {
     }
 }
 
-
 //: [Next](@next)
